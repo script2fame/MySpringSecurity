@@ -1,17 +1,18 @@
 package com.hungteshun.web.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.hungteshun.dto.User;
 import com.hungteshun.dto.UserQueryCondition;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author hungteshun
@@ -30,5 +31,13 @@ public class UserController {
         users.add(new User());
         users.add(new User());
         return users;
+    }
+
+    @RequestMapping(value = "/user/{id}",method = RequestMethod.GET)
+    public User getUserById(@PathVariable(value = "id") String id){
+        User user = new User();
+        user.setUserName("hungteshun");
+        user.setAge(23);
+        return user;
     }
 }
