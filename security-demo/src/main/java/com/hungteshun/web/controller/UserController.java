@@ -12,7 +12,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -35,7 +34,7 @@ public class UserController {
         return users;
     }
 
-    @RequestMapping(value = "/{id:\\d+}",method = RequestMethod.GET)
+    @GetMapping(value = "/{id:\\d+}")
     public User getUserById(@PathVariable(value = "id") String id){
         User user = new User();
         user.setUserName("hungteshun");
