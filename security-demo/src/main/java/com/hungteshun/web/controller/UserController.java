@@ -27,7 +27,6 @@ public class UserController {
         System.out.println(ReflectionToStringBuilder.toString(userQueryCondition, ToStringStyle.MULTI_LINE_STYLE));
         System.out.println(pageable.getPageNumber());
         System.out.println(pageable.getPageSize());
-        System.out.println(pageable.getSort());
         List<User> users = new ArrayList<>();
         users.add(new User());
         users.add(new User());
