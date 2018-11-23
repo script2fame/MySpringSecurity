@@ -1,17 +1,13 @@
 package com.hungteshun.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 /**
  * @author hungteshun
  * @description:
  * @date 2018/11/23 17:33
  */
-@Getter
-@Setter
-@ToString
+@Data
 public class User {
     private String userName;
     private String password;
