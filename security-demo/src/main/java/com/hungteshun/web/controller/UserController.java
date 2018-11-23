@@ -20,9 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2018/11/23 17:31
  */
 @RestController
+@RequestMapping(value = "/user")
 public class UserController {
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public List<User> query(UserQueryCondition userQueryCondition, @PageableDefault(page = 0, size = 15, sort = "age,desc") Pageable pageable) {
         System.out.println(userQueryCondition);
         System.out.println(ReflectionToStringBuilder.toString(userQueryCondition, ToStringStyle.MULTI_LINE_STYLE));
