@@ -56,4 +56,11 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.userName").value("hungteshun")
                 );
     }
+
+    @Test
+    public void testGetUserById2() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/user/aaa")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().is4xxClientError());
+    }
 }
