@@ -10,3 +10,4 @@
 ### 步骤四
 运行MySpringSecurity\security-demo\src\main\java\com\hungteshun\DemoApp.java文件启动项目
 # 单元测试
+使用MockMvc模拟发送restful请求
