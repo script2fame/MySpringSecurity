@@ -25,8 +25,6 @@ public class UserController {
     public List<User> query(UserQueryCondition userQueryCondition, @PageableDefault(page = 0, size = 15, sort = "age,desc") Pageable pageable) {
         System.out.println(userQueryCondition);
         System.out.println(ReflectionToStringBuilder.toString(userQueryCondition, ToStringStyle.MULTI_LINE_STYLE));
-        System.out.println(pageable.getPageNumber());
-        System.out.println(pageable.getPageSize());
         List<User> users = new ArrayList<>();
         users.add(new User());
         users.add(new User());
